@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+{% ifequal password1|stringformat:"s"|cut:"("|cut:")"|cut:"'"|cut:","|cut:"["|cut:"]" password2 %}
+<h1>Login Success for adminId : {{ username }} </h1>
+{% endifequal %}
+
+{% ifnotequal password1|stringformat:"s"|cut:"("|cut:")"|cut:"'"|cut:","|cut:"["|cut:"]" password2 %}
+<h1>Login Unsuccessful for adminId : {{ username }} password incorrect</h1>
+{% endifnotequal %}
+</body>
+</html>

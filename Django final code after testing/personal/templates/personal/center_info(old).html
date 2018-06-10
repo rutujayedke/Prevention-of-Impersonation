@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+</style>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+</head>
+<body>
+<div class="panel-heading text-center panel-relative">
+    <h1><b>Center Details</b></h1>
+  </div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><b>Impersonation System</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{% url 'login' %}"><b>Home</b></a></li>
+      <li class="active"><a href="{% url 'centerinfo' %}"><b>Center Information</b></a></li>
+      <li><a href="{% url 'report' %}"><b>Report</b></a></li>
+      <li><a href="{% url 'main' %}"><b>Log Out</b></a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+<img src="{% static 'personal/images/center.jpg' %}" class="center-block" alt="Responsive image" width="80%" height="30%">
+<div class="card mb-3">
+  <img class="card-img-top center-block" src="{% static 'personal/images/center.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+</form>
+
+
+</body>
+</html>

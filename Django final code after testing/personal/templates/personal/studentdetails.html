@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body>
+{% csrf_token %}
+<div class="panel-heading text-center panel-relative">
+    <h1><b>Search Student</b></h1>
+  </div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><b>Impersonation System</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="{% url 'login' %}"><b>Home</b></a></li>
+      <li><a href="{% url 'centerinfo' %}"><b>Center Information</b></a></li>
+      <li><a href="{% url 'report' %}"><b>Report</b></a></li>
+      <li class="active"><a href="{% url 'studentdetails' %}"><b>Student Details</b></a></li>
+      <li><a href="{% url 'main' %}"><b>Log Out</b></a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+<form name = "form" action = "{% url 'showdetails' %}">
+	<div data-validate = "Enter username">
+		<center><input type="text" name="misId" placeholder="Student MIS">
+			<span data-placeholder="&#xe82a;"></span>
+		<button value = "click">Search</button></center>
+	</div>
+</form>
+
+</body>
+</html>
